@@ -44,7 +44,6 @@ export class NgOrganizationChartHelper {
     }
 
     private isChildren(nodeRelations, destinationNodeId): boolean{
-        console.log(nodeRelations);
         for(let id of nodeRelations){
             if(id == destinationNodeId || this.isChildren(this.nodesRelations[id], destinationNodeId)){
                 return true;
