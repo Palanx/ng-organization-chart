@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgOrganizationChartHelper } from '../ng-organization-chart/ng-organization-chart-helper';
-
+import { NgOrganizationChartNodeModel } from '../ng-organization-chart/ng-organization-chart-node-model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,40 +11,40 @@ export class AppComponent {
 
   data = [
     {
-      id: 1,
+      id: "1",
       nodeTitlePro: "Neo",
       nodeContentPro: "Domagor de alpacas",
       children: [
         {
-          id: 2,
+          id: "2",
           nodeTitlePro: "Diogo",
           nodeContentPro: "Domagor de alpacas",
           children: [
             {
-              id: 3,
+              id: "3",
               nodeTitlePro: "Higor",
               nodeContentPro: "Domagor de alpacas",
               children: [
                 {
-                  id: 4,
+                  id: "4",
                   nodeTitlePro: "Angular",
                   nodeContentPro: "Domagor de alpacas",
                   children: []
                 },
                 {
-                  id: 5,
+                  id: "5",
                   nodeTitlePro: "CSS",
                   nodeContentPro: "Domagor de alpacas",
                   children: []
                 },
                 {
-                  id: 6,
+                  id: "6",
                   nodeTitlePro: "HTML",
                   nodeContentPro: "Domagor de alpacas",
                   children: []
                 },
                 {
-                  id: 7,
+                  id: "7",
                   nodeTitlePro: "Piadas sem graça",
                   nodeContentPro: "Domagor de alpacas",
                   children: []
@@ -52,18 +52,18 @@ export class AppComponent {
               ]
             },
             {
-              id: 8,
+              id: "8",
               nodeTitlePro: "Edson",
               nodeContentPro: "Domagor de alpacas",
               children: [
                 {
-                  id: 9,
+                  id: "9",
                   nodeTitlePro: "PHP",
                   nodeContentPro: "Domagor de alpacas",
                   children: []
                 },
                 {
-                  id: 10,
+                  id: "10",
                   nodeTitlePro: "Amazon AWS",
                   nodeContentPro: "Domagor de alpacas",
                   children: []
@@ -72,23 +72,23 @@ export class AppComponent {
               ]
             },
             {
-              id: 11,
+              id: "11",
               nodeTitlePro: "Karen",
               nodeContentPro: "Domagor de alpacas",
               children: [
                 {
-                  id: 12,
+                  id: "12",
                   nodeTitlePro: "Litrão",
                   nodeContentPro: "Domagor de alpacas",
                   children: []
                 },
                 {
-                  id: 13,
+                  id: "13",
                   nodeTitlePro: "Balada",
                   nodeContentPro: "Domagor de alpacas",
                   children: [
                     {
-                      id: 14,
+                      id: "14",
                       nodeTitlePro: "Terraço Club",
                       nodeContentPro: "Domagor de alpacas",
                       children: []
@@ -96,12 +96,12 @@ export class AppComponent {
                   ]
                 },
                 {
-                  id: 15,
+                  id: "15",
                   nodeTitlePro: "Happy Hour",
                   nodeContentPro: "Domagor de alpacas",
                   children: [
                     {
-                      id: 16,
+                      id: "16",
                       nodeTitlePro: "Risca faca",
                       nodeContentPro: "Domagor de alpacas",
                       children: []
@@ -117,13 +117,16 @@ export class AppComponent {
   ]
 
   clickNode(node) {
-    alert("Node '" + node.id + "' was clicked!")
+    alert("Node '" + node.id + "' was clicked!");
   }
 
   dragNode(transfer) {
     let helper = new NgOrganizationChartHelper(this.data);
-    helper.moveNode(transfer.node.id, transfer.destination.id);
-    let data = helper.getData();
-    this.data = data
+    let fnError = () => alert("To prevent a recursive dependency you can't make this change");
+    let fnSuccess = () => {
+      let data = helper.getData();
+      this.data = data;
+    };
+    helper.moveNode(transfer.node.id, transfer.destination.id, fnSuccess, fnError);
   }
 }
