@@ -1,5 +1,10 @@
  ng-organization-chart-list {
+	overflow-x: scroll;
+    overflow-y: hidden;
+	white-space: nowrap;
+	padding-bottom: 10px;
 	position: relative;
+	overflow: auto;
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
