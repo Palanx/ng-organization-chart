@@ -1,8 +1,8 @@
-import { NgOrganizationChartModule } from './../ng-organization-chart/ng-organization-chart.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { NgOrganizationChartModule } from './../ng-organization-chart/ng-organization-chart.module';
 
 @NgModule({
   declarations: [

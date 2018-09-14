@@ -1,5 +1,5 @@
-import { NgOrganizationChartHelper } from './../ng-organization-chart/ng-organization-chart-helper';
 import { Component } from '@angular/core';
+import { NgOrganizationChartHelper } from '../ng-organization-chart/ng-organization-chart-helper';
 
 @Component({
   selector: 'app-root',
@@ -7,71 +7,103 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'ng-organization-chart-px';
 
   data = [
     {
-      id: "Neo",
+      id: 1,
+      nodeTitlePro: "Neo",
+      nodeContentPro: "Domagor de alpacas",
       children: [
         {
-          id: "Diogo",
+          id: 2,
+          nodeTitlePro: "Diogo",
+          nodeContentPro: "Domagor de alpacas",
           children: [
             {
-              id: "Higor",
+              id: 3,
+              nodeTitlePro: "Higor",
+              nodeContentPro: "Domagor de alpacas",
               children: [
                 {
-                  id: "Angular",
+                  id: 4,
+                  nodeTitlePro: "Angular",
+                  nodeContentPro: "Domagor de alpacas",
                   children: []
                 },
                 {
-                  id: "CSS",
+                  id: 5,
+                  nodeTitlePro: "CSS",
+                  nodeContentPro: "Domagor de alpacas",
                   children: []
                 },
                 {
-                  id: "HTML",
+                  id: 6,
+                  nodeTitlePro: "HTML",
+                  nodeContentPro: "Domagor de alpacas",
                   children: []
                 },
                 {
-                  id: "Piadas sem graça",
+                  id: 7,
+                  nodeTitlePro: "Piadas sem graça",
+                  nodeContentPro: "Domagor de alpacas",
                   children: []
                 },
               ]
             },
             {
-              id: "Edson",
+              id: 8,
+              nodeTitlePro: "Edson",
+              nodeContentPro: "Domagor de alpacas",
               children: [
                 {
-                  id: "PHP",
+                  id: 9,
+                  nodeTitlePro: "PHP",
+                  nodeContentPro: "Domagor de alpacas",
                   children: []
                 },
                 {
-                  id: "Amazon AWS",
+                  id: 10,
+                  nodeTitlePro: "Amazon AWS",
+                  nodeContentPro: "Domagor de alpacas",
                   children: []
                 },
 
               ]
             },
             {
-              id: "Karen",
+              id: 11,
+              nodeTitlePro: "Karen",
+              nodeContentPro: "Domagor de alpacas",
               children: [
                 {
-                  id: "Litrão",
+                  id: 12,
+                  nodeTitlePro: "Litrão",
+                  nodeContentPro: "Domagor de alpacas",
                   children: []
                 },
                 {
-                  id: "Balada",
+                  id: 13,
+                  nodeTitlePro: "Balada",
+                  nodeContentPro: "Domagor de alpacas",
                   children: [
                     {
-                      id: "Terraço Club",
+                      id: 14,
+                      nodeTitlePro: "Terraço Club",
+                      nodeContentPro: "Domagor de alpacas",
                       children: []
                     },
                   ]
                 },
                 {
-                  id: "Happy Hour",
+                  id: 15,
+                  nodeTitlePro: "Happy Hour",
+                  nodeContentPro: "Domagor de alpacas",
                   children: [
                     {
-                      id: "Risca faca",
+                      id: 16,
+                      nodeTitlePro: "Risca faca",
+                      nodeContentPro: "Domagor de alpacas",
                       children: []
                     },
                   ]
@@ -94,5 +126,4 @@ export class AppComponent {
     let data = helper.getData();
     this.data = data
   }
-  
 }

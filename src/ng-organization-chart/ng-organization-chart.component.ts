@@ -18,11 +18,11 @@ export class NgOrganizationChartComponent implements OnInit {
 
   ngOnInit() { }
 
-  onClickDeepNode(node) {
+  onClickDeepNode(node: NgOrganizationChartNodeModel) {
     this.onClickNode.emit(node);
   }
 
-  onDragDeepNode(transfer) {
+  onDragDeepNode(transfer: any) {
     this.onDragNode.emit(transfer)
   }
 
