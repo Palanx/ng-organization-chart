@@ -61,14 +61,14 @@ children | NgOrganizationChartNodeModel[]
 ```json
 [
    {
-      id: "1",
-      nodeTitlePro: "Tomás Muñiz",
-      nodeContentPro: "CEO",
-      data: { x: 123, y: 548, whatever: "-15.578" }
-      children: [
-        { id: "2", nodeTitlePro: "Person#1", nodeContentPro: "Minion's CEO", data: [ 1, 2, 3 ] children: [] },
-        { id: "3", nodeTitlePro: "Person#2", nodeContentPro: "Minion's CEO", data: { img: "smile" } children: [] },
-        { id: "4", nodeTitlePro: "Person#3", nodeContentPro: "Minion's CEO", children: [] },
+      "id": "1",
+      "nodeTitlePro": "Tomás Muñiz",
+      "nodeContentPro": "CEO",
+      "data": { "x": 123, "y": 548, "whatever": "-15.578" },
+      "children": [
+        { "id": "2", "nodeTitlePro": "Person#1", "nodeContentPro": "Minion's CEO", "data": [ 1, 2, 3 ], "children": [] },
+        { "id": "3", "nodeTitlePro": "Person#2", "nodeContentPro": "Minion's CEO", "data": { "img": "smile" }, "children": [] },
+        { "id": "4", "nodeTitlePro": "Person#3", "nodeContentPro": "Minion's CEO", "children": [] }
       ]
    }
 ]
