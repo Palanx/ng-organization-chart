@@ -55,7 +55,7 @@ id | string
 nodeTitlePro | string
 nodeContentPro | string
 data | any
-children | Array<NgOrganizationChartNodeModel>
+children | NgOrganizationChartNodeModel[]
 
 ##### Example
 ```json
