@@ -48,6 +48,7 @@ public canDropHere(nodeId, destinationNodeId):boolean
 ```
 ### Data
 class `NgOrganizationChartNodeModel`
+
 Attribute | Type
 --------- | ----
 id | string
@@ -55,6 +56,7 @@ nodeTitlePro | string
 nodeContentPro | string
 data | any
 children | Array<NgOrganizationChartNodeModel>
+
 ##### Example
 ```json
 [
