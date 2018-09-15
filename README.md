@@ -8,17 +8,17 @@ Check the demo [here](https://ng-organization-chart-px.firebaseapp.com/)!
 
 ## Features
 
- * Render hierarchical trees;
- * Show and hide node's children;
- * Drag and drop node movement;
- * Works with remote and local data;
- * Prevent a recursive dependency;
+ * Render hierarchical trees
+ * Show and hide node's children
+ * Drag and drop node movement
+ * Works with remote and local data
+ * Prevent a recursive dependency
 
 ## Usage exemple
 
 ### HTML
 ```html
-	<ng-organization-chart [data]="data" (onClickNode)="clickNode($event)" (onDragNode)="dragNode($event)"></ng-organization-chart>
+<ng-organization-chart [data]="data" (onClickNode)="clickNode($event)" (onDragNode)="dragNode($event)"></ng-organization-chart>
 ```
 ### Functions
 ##### Examples 
@@ -60,17 +60,17 @@ children | NgOrganizationChartNodeModel[]
 ##### Example
 ```json
 [
-   {
-      "id": "1",
-      "nodeTitlePro": "Tomás Muñiz",
-      "nodeContentPro": "CEO",
-      "data": { "x": 123, "y": 548, "whatever": "-15.578" },
-      "children": [
-        { "id": "2", "nodeTitlePro": "Person#1", "nodeContentPro": "Minion's CEO", "data": [ 1, 2, 3 ], "children": [] },
-        { "id": "3", "nodeTitlePro": "Person#2", "nodeContentPro": "Minion's CEO", "data": { "img": "smile" }, "children": [] },
-        { "id": "4", "nodeTitlePro": "Person#3", "nodeContentPro": "Minion's CEO", "children": [] }
-      ]
-   }
+  {
+    "id": "1",
+    "nodeTitlePro": "Tomás Muñiz",
+    "nodeContentPro": "CEO",
+    "data": { "x": 123, "y": 548, "whatever": "-15.578" },
+    "children": [
+      { "id": "2", "nodeTitlePro": "Person#1", "nodeContentPro": "Minion's CEO", "data": [ 1, 2, 3 ], "children": [] },
+      { "id": "3", "nodeTitlePro": "Person#2", "nodeContentPro": "Minion's CEO", "data": { "img": "smile" }, "children": [] },
+      { "id": "4", "nodeTitlePro": "Person#3", "nodeContentPro": "Minion's CEO", "children": [] }
+    ]
+  }
 ]
 ```
 
