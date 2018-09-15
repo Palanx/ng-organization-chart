@@ -4,7 +4,7 @@ This is a simple Angular 6 component that you can use to render organization cha
 
 ## Demo
 
-Check the demo [here](https://ng-organization-chart.firebaseapp.com/)!
+Check the demo [here](https://ng-organization-chart-px.firebaseapp.com/)!
 
 ## Features
 
